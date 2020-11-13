@@ -1,0 +1,24 @@
+1)What is the difference between compile time and runtime?
+=>Compile time is the time at which source code is converted to the byte code that is .class file that is executable code.
+    runtime is the time at which the executable code starts running.
+
+
+2)Explain types of variables with example.
+=>There are two types of variables class variables and local variables.
+class variables nothing but fields,these variables can be assessed anywhere in that perticular class.Local variables are only assessed within the perticular method only.
+ex: public class Welcome{
+     public static void main(String[] args){
+     }
+     public static void printWish(String printwish){
+	System.out.println("saying "+printwish);
+	String wish="hello";                                //local variable
+	System.out.println("saying "+wish);
+	} 
+    } 
+	
+ex:public class Welcome{
+    private static String wish;                     //field or class variable
+	}
+	
+	
+
