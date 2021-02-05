@@ -110,4 +110,18 @@ public class AquariumServiceImpl implements AquariumService {
 		return this.dao.size();
 	}
 
+	@Override
+	public List<AquariumDTO> validateAndGetAll() {
+		return this.dao.getAll();
+	}
+
+	@Override
+	public int validateAndGetByNoOfFish(int noOfFish) {
+		System.out.println("invoked validateAndGetByNoOfFish");
+		if(noOfFish>0 && noOfFish<=5) {
+			this.dao.getByNoOfFish(noOfFish);
+		}
+		return 0;
+	}
+
 }

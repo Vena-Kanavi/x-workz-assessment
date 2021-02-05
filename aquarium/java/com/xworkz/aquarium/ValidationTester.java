@@ -31,14 +31,25 @@ public class ValidationTester {
 		list.add(dto3);
 
 		service.validateAndSaveMultipleValues(list);
+		System.out.println();
+		
+		service.validateAndGetByNoOfFish(5);
+		
+		System.out.println();
 
 		service.validateAndUpdateShapeByNoOfFish("square", 5);
+		System.out.println();
 
 		System.out.println("before deleting shape " + service.validateSize());
 
 		service.validateAndDeleteByShape("round");
 
 		System.out.println("after deleting shape " + service.validateSize());
+		
+		System.out.println();
+		
+		List<AquariumDTO> retrived=service.validateAndGetAll();
+		System.out.println("got all elements "+retrived);
 
 	}
 

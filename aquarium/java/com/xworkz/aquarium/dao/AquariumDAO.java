@@ -13,6 +13,10 @@ public interface AquariumDAO {
 	boolean deleteByShape(String shape);
 
 	boolean saveMultipleValues(List<AquariumDTO> dtos);
+	
+	List<AquariumDTO> getAll();
+	
+	int getByNoOfFish(int noOfFish);
 
 	int size();
 

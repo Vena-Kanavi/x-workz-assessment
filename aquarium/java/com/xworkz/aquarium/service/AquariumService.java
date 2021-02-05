@@ -12,6 +12,10 @@ public interface AquariumService {
 	boolean validateAndDeleteByShape(String shape);
 
 	boolean validateAndSaveMultipleValues(List<AquariumDTO> dtos);
+	
+	int validateAndGetByNoOfFish(int noOfFish);
+	
+	List<AquariumDTO> validateAndGetAll();
 
 	int validateSize();
 }

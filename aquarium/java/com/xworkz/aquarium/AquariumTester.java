@@ -26,13 +26,28 @@ public class AquariumTester {
 		dtos.add(dto2);
 		dtos.add(dto3);
 		dao.saveMultipleValues(dtos);
-
+		
+		System.out.println();
+		
+		dao.getByNoOfFish(2);
+	   
+        System.out.println();
+		
 		dao.updateShapeByNoOfFish("square", 5);
+		
+		System.out.println();
 
 		System.out.println("size of list before deleting " + dao.size());
 		dao.deleteByShape("square");
 
 		System.out.println("size of list after deleting " + dao.size());
+		
+		System.out.println();
+		
+	    List<AquariumDTO> retrived=dao.getAll();
+	    System.out.println("retrived all "+retrived);
+	    
+	    
 
 	}
 

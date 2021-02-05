@@ -89,4 +89,28 @@ public class AquariumDAOImpl implements AquariumDAO {
 		return this.list.size();
 	}
 
+	@Override
+	public List<AquariumDTO> getAll() {
+		return this.list;
+	}
+
+	@Override
+	public int getByNoOfFish(int noOfFish) {
+		System.out.println("invoked getByNoOfFish");
+		boolean found = false;
+		if (noOfFish > 0) {
+			for (AquariumDTO aquariumDTO : list) {
+				int fishPresent = aquariumDTO.getNoOfFish();
+				if (fishPresent == noOfFish) {
+					System.out.println("got by no of fish " + aquariumDTO);
+					break;
+				} else {
+					//System.out.println("noOfFish not matched");
+					found = false;
+				}
+			}
+		}
+		return 0;
+	}
+
 }
